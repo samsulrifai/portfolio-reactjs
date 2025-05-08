@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -20,25 +21,42 @@ export default function HomePage() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-background to-muted/50 py-20 md:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
-              Hi, I&apos;m <span className="text-primary">{aboutMe.name}</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground mb-8">
-              A {aboutMe.title}. I help businesses boost their online sales and presence through expert advertising on Shopee, Tokopedia, Lazada, and strategic digital marketing.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
-                <Link href="/works">
-                  View My Campaigns <Briefcase className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
-                <Link href="/contact">
-                  Get In Touch <Mail className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text and Buttons */}
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
+                Hi, I&apos;m <span className="text-primary">{aboutMe.name}</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-muted-foreground mb-8">
+                A {aboutMe.title}. I help businesses boost their online sales and presence through expert advertising on Shopee, Tokopedia, Lazada, and strategic digital marketing.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
+                  <Link href="/works">
+                    View My Campaigns <Briefcase className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
+                  <Link href="/contact">
+                    Get In Touch <Mail className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            {/* Right Column: Image */}
+            <div className="flex justify-center md:justify-end order-first md:order-last">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-xl border-4 border-primary/30">
+                <Image
+                  src={aboutMe.profileImageUrl}
+                  alt={`${aboutMe.name} - ${aboutMe.title}`}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 640px) 12rem, (max-width: 768px) 14rem, (max-width: 1024px) 16rem, 18rem"
+                  data-ai-hint="professional portrait"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -55,8 +73,7 @@ export default function HomePage() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
-                priority
-                data-ai-hint="professional portrait"
+                data-ai-hint="professional portrait" 
               />
             </div>
             <div>
