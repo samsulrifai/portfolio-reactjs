@@ -157,8 +157,8 @@ export const educations: Education[] = [
 ];
 
 export const aboutMe = {
-  name: "Alex Johnson", // Replace with your name
-  title: "Full-Stack Developer & UI/UX Enthusiast",
+  name: "Samsul Rifai", // Replace with your name
+  title: "Digital Marketing Enthusiast & Marketplace Ads Expert",
   bio: `Hello! I'm Alex, a passionate and results-driven Full-Stack Developer with a keen eye for UI/UX design. With over 7 years of experience in the tech industry, I specialize in creating dynamic, responsive, and user-friendly web and mobile applications. My journey in technology began with a fascination for how software can solve real-world problems, and this curiosity continues to drive my work today.
 
 I thrive in collaborative environments and enjoy tackling complex challenges, transforming ideas into tangible products. My expertise spans across the MERN stack, Next.js, and various design tools like Figma. I'm always eager to learn new technologies and methodologies to stay at the forefront of innovation.
