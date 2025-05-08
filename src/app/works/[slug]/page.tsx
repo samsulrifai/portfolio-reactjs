@@ -1,4 +1,4 @@
-import { portfolioItems } from '@/lib/data';
+import { portfolioItems, aboutMe } from '@/lib/data'; // Added aboutMe
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -22,24 +22,26 @@ export async function generateMetadata(
   if (!item) {
     return {
       title: `Project Not Found | ${APP_NAME}`,
-      description: 'The project you are looking for does not exist.',
+      description: 'The project or campaign you are looking for does not exist.',
     };
   }
 
   const previousImages = (await parent).openGraph?.images || []
+  const keywords = item.tags ? [...item.tags, item.category, 'digital marketing', 'marketplace advertising', aboutMe.name] : ['digital marketing', 'marketplace advertising', aboutMe.name, item.category];
+
 
   return {
-    title: `${item.title} | Works`,
+    title: `${item.title} | Works | ${aboutMe.name}`,
     description: item.briefDescription,
-    keywords: item.tags,
+    keywords: keywords,
     openGraph: {
-      title: `${item.title} | ${APP_NAME}`,
+      title: `${item.title} | ${APP_NAME} - ${aboutMe.name}`,
       description: item.briefDescription,
       images: [item.imageUrl, ...previousImages],
     },
      twitter: {
       card: 'summary_large_image',
-      title: `${item.title} | ${APP_NAME}`,
+      title: `${item.title} | ${APP_NAME} - ${aboutMe.name}`,
       description: item.briefDescription,
       images: [item.imageUrl],
     }
@@ -63,7 +65,7 @@ export default function PortfolioItemPage({ params }: { params: { slug: string }
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       <Button variant="outline" asChild className="mb-8 group hover:bg-primary hover:text-primary-foreground transition-colors">
         <Link href="/works">
-          <ArrowLeft className="mr-2 h-4 w-4 group-hover:translate-x-[-2px] transition-transform" /> Back to Works
+          <ArrowLeft className="mr-2 h-4 w-4 group-hover:translate-x-[-2px] transition-transform" /> Back to Projects
         </Link>
       </Button>
 
@@ -83,7 +85,7 @@ export default function PortfolioItemPage({ params }: { params: { slug: string }
                 sizes="(max-width: 1200px) 100vw, 66vw"
                 className="object-cover"
                 priority
-                data-ai-hint={`${item.category} project detail`}
+                data-ai-hint={`${item.category} campaign results`}
               />
             </div>
             
@@ -121,7 +123,7 @@ export default function PortfolioItemPage({ params }: { params: { slug: string }
                 )}
                  {item.tags && item.tags.length > 0 && (
                   <div>
-                    <strong className="block mb-1">Technologies:</strong>
+                    <strong className="block mb-1">Focus Areas & Platforms:</strong>
                     <div className="flex flex-wrap gap-2">
                       {item.tags.map(tag => (
                         <span key={tag} className="text-xs bg-accent/20 text-primary px-2 py-1 rounded-full">{tag}</span>
@@ -132,10 +134,10 @@ export default function PortfolioItemPage({ params }: { params: { slug: string }
               </CardContent>
             </Card>
 
-            {item.projectUrl && (
+            {item.projectUrl && item.projectUrl !== '#' && ( // Added condition to hide if #
               <Button asChild className="w-full" size="lg">
                 <a href={item.projectUrl} target="_blank" rel="noopener noreferrer">
-                  Visit Project <ExternalLink className="ml-2 h-5 w-5" />
+                  View Case Study <ExternalLink className="ml-2 h-5 w-5" />
                 </a>
               </Button>
             )}

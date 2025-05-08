@@ -8,8 +8,8 @@ import { aboutMe } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Contact Me',
-  description: `Get in touch with ${aboutMe.name}. Send a message via the contact form or connect on social media.`,
-  keywords: ['contact', 'message', 'email', 'social media', aboutMe.name],
+  description: `Get in touch with ${aboutMe.name} for collaborations on digital marketing, Shopee, Tokopedia, or Lazada advertising projects. Send a message or connect on social media.`,
+  keywords: ['contact', 'message', 'email', 'social media', aboutMe.name, 'digital marketing consultant', 'marketplace ads expert', 'shopee ads', 'tokopedia ads', 'lazada ads', 'e-commerce strategy'],
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
       <header className="text-center mb-12 md:mb-16">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-4">Get In Touch</h1>
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Have a project in mind, a question, or just want to say hi? I&apos;d love to hear from you!
+          Have an e-commerce project, a question about marketplace advertising, or just want to discuss digital growth? I&apos;d love to hear from you!
         </p>
       </header>
 
@@ -67,7 +67,7 @@ export default function ContactPage() {
           <div className="text-center p-6 bg-muted/30 rounded-lg shadow-md">
               <h3 className="text-lg font-semibold text-foreground mb-2">Availability</h3>
               <p className="text-sm text-muted-foreground">
-                I&apos;m currently available for freelance projects and collaborations. Feel free to reach out!
+                I&apos;m currently available for freelance projects and consulting on marketplace advertising and e-commerce strategy. Feel free to reach out!
               </p>
           </div>
         </aside>

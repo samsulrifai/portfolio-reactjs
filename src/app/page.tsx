@@ -8,8 +8,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: `Welcome to ${aboutMe.name}'s portfolio. Discover my projects, skills, and professional journey.`,
-  keywords: ['portfolio', aboutMe.name, 'developer', 'designer', 'web development', 'ui/ux', 'projects', 'home page'],
+  description: `Welcome to ${aboutMe.name}'s portfolio. Discover my successful digital marketing campaigns, marketplace ads expertise, and professional journey.`,
+  keywords: ['portfolio', aboutMe.name, 'digital marketing', 'marketplace ads', 'shopee expert', 'tokopedia expert', 'lazada expert', 'e-commerce', 'home page'],
 };
 
 
@@ -26,12 +26,12 @@ export default function HomePage() {
               Hi, I&apos;m <span className="text-primary">{aboutMe.name}</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8">
-              {aboutMe.title}. I craft digital experiences that are intuitive, engaging, and impactful.
+              A {aboutMe.title}. I help businesses boost their online sales and presence through expert advertising on Shopee, Tokopedia, Lazada, and strategic digital marketing.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
                 <Link href="/works">
-                  View My Works <Briefcase className="ml-2 h-5 w-5" />
+                  View My Campaigns <Briefcase className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
@@ -79,9 +79,9 @@ export default function HomePage() {
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Featured Works</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Featured Campaigns & Projects</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Here&apos;s a glimpse of some projects I&apos;m proud of. Each one represents a unique challenge and a rewarding journey.
+              Here&apos;s a glimpse of some impactful campaigns and projects I&apos;m proud of. Each showcases strategic thinking and tangible results.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -95,7 +95,7 @@ export default function HomePage() {
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      data-ai-hint="project screenshot"
+                      data-ai-hint="marketing campaign e-commerce"
                     />
                   </div>
                 </CardHeader>

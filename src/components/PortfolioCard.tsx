@@ -22,7 +22,7 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover group-hover:scale-105 transition-transform duration-300"
-            data-ai-hint={`${item.category} project`}
+            data-ai-hint={`${item.category} campaign`}
           />
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
         </Link>

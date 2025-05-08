@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import { PortfolioCard } from '@/components/PortfolioCard';
-import { portfolioItems, portfolioCategories } from '@/lib/data';
+import { portfolioItems, portfolioCategories, aboutMe } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, X } from 'lucide-react';
@@ -14,14 +14,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useSearchParams, useRouter } from 'next/navigation';
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next'; // Metadata should be handled in a server component or generateMetadata function if dynamic aspects are needed
 
-// Note: Metadata cannot be dynamically generated in client components.
-// For dynamic metadata based on filters, consider server-side logic or a separate metadata export.
-// export const metadata: Metadata = {
-// title: 'My Works',
-// description: 'Explore my collection of projects, showcasing my skills in web development, UI/UX design, and more.',
-// keywords: ['projects', 'portfolio', 'gallery', 'web development', 'ui/ux design', 'mobile apps'],
+// export const metadata: Metadata = { // This should be in a server component or page.tsx if static
+// title: `My Works | ${aboutMe.name}`,
+// description: `Explore ${aboutMe.name}'s collection of digital marketing campaigns and e-commerce projects, showcasing expertise in Shopee, Tokopedia, Lazada, SEO, SMM, and more.`,
+// keywords: ['projects', 'portfolio', 'digital marketing', 'marketplace advertising', 'shopee', 'tokopedia', 'lazada', 'seo', 'social media marketing', aboutMe.name],
 // };
 
 
@@ -69,8 +67,8 @@ export default function WorksPage() {
     return (
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground mb-4">Loading Works...</h1>
-          <p className="text-lg text-muted-foreground">Please wait while we fetch the projects.</p>
+          <h1 className="text-4xl font-bold tracking-tight text-foreground mb-4">Loading Projects...</h1>
+          <p className="text-lg text-muted-foreground">Please wait while we fetch the campaigns and projects.</p>
         </div>
       </div>
     );
@@ -79,9 +77,9 @@ export default function WorksPage() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       <header className="text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-4">My Works</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-4">My Campaigns & Projects</h1>
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Dive into my portfolio of projects. Filter by category or search for specific skills or technologies.
+          Dive into my portfolio of successful digital marketing campaigns and e-commerce projects. Filter by expertise or search for specific platforms like Shopee, Tokopedia, or Lazada.
         </p>
       </header>
 
@@ -89,7 +87,7 @@ export default function WorksPage() {
         <div className="relative w-full sm:max-w-xs">
           <Input 
             type="text"
-            placeholder="Search projects..."
+            placeholder="Search projects (e.g., Shopee, SEO)"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="pl-10"
@@ -109,7 +107,7 @@ export default function WorksPage() {
         
         <div className="w-full sm:w-auto">
           <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-            <SelectTrigger className="w-full sm:w-[180px]">
+            <SelectTrigger className="w-full sm:w-[220px]">
               <SelectValue placeholder="Filter by category" />
             </SelectTrigger>
             <SelectContent>
@@ -150,3 +148,12 @@ export default function WorksPage() {
     </div>
   );
 }
+
+// It's better to define static metadata directly or use generateMetadata for dynamic parts in a server context.
+// For this client component, if metadata is desired, it would typically be set in the nearest parent server component or layout.
+// For example, in `src/app/works/layout.tsx` if it existed, or `src/app/layout.tsx` if global to all works.
+// Since we are in a client component, we cannot export `metadata` directly for Next.js to pick up.
+// The `metadata` object above the component is commented out for this reason.
+// However, if you need a static title for this page, you can set it in the parent layout or a specific layout for `/works`.
+// Or, if this page were a Server Component, the metadata object would work.
+export const dynamic = 'force-dynamic'; // Or other appropriate export if needed for searchParams

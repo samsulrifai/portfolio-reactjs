@@ -7,8 +7,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Me',
-  description: `Learn more about ${aboutMe.name}, my skills, professional experience, and educational background.`,
-  keywords: ['about me', 'biography', 'skills', 'experience', 'education', aboutMe.name],
+  description: `Learn more about ${aboutMe.name}, my digital marketing skills, professional experience in marketplace advertising (Shopee, Tokopedia, Lazada), and educational background.`,
+  keywords: ['about me', 'biography', 'skills', 'experience', 'education', aboutMe.name, 'digital marketing', 'marketplace ads', 'shopee expert', 'tokopedia expert', 'lazada expert', 'e-commerce consultant'],
 };
 
 export default function AboutPage() {
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <header className="text-center mb-12 md:mb-16">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-4">About Me</h1>
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Get to know the person behind the pixels – my journey, skills, and aspirations.
+          Get to know the strategist behind the campaigns – my journey, skills, and passion for digital growth.
         </p>
       </header>
 
@@ -90,7 +90,7 @@ export default function AboutPage() {
               <div key={index} className="relative">
                 <div className="absolute -left-[38px] top-1 h-6 w-6 rounded-full bg-primary ring-4 ring-background flex items-center justify-center">
                   {exp.logoUrl ? (
-                     <Image src={exp.logoUrl} alt={`${exp.company} logo`} width={20} height={20} className="rounded-full" data-ai-hint="company logo"/>
+                     <Image src={exp.logoUrl} alt={`${exp.company} logo`} width={20} height={20} className="rounded-full" data-ai-hint="company logo marketing"/>
                   ) : (
                     <Briefcase className="h-3 w-3 text-primary-foreground"/>
                   )}
