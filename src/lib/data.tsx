@@ -149,13 +149,7 @@ export const educations: Education[] = [
     institution: 'Universitas Muhammadiyah Purwokerto',
     period: '2019 - 2023',
     description: 'Graduated with a focus on software development, data structures, algorithms, and information systems. Developed a strong foundation in technology which complements my digital marketing expertise.',
-  },
-  {
-    degree: 'Certified Digital Marketing Professional (CDMP)',
-    institution: 'Digital Marketing Institute',
-    period: '2019', // Assuming this is still relevant or was obtained earlier/concurrently
-    description: 'Completed comprehensive certification covering SEO, SEM, Social Media Marketing, Email Marketing, and Digital Strategy.',
-  },
+  }
 ];
 
 export const aboutMe = {
