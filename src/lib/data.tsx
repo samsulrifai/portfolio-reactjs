@@ -12,7 +12,7 @@ export const portfolioItems: PortfolioItem[] = [
     briefDescription: 'Boosted sales by 150% for a fashion brand on Shopee through targeted ads and promotions.',
     detailedDescription: (
       <>
-        <p className="mb-4">This project focused on revitalizing a fashion brand's presence on Shopee. We developed a comprehensive strategy involving Shopee Ads (Search Ads, Discovery Ads), Flash Sales, and influencer collaborations.</p>
+        <p className="mb-4">This project focused on revitalizing a fashion brand&apos;s presence on Shopee. We developed a comprehensive strategy involving Shopee Ads (Search Ads, Discovery Ads), Flash Sales, and influencer collaborations.</p>
         <h3 className="text-xl font-semibold mb-2 text-primary">Key Achievements:</h3>
         <ul className="list-disc list-inside mb-4 space-y-1">
           <li>Increased overall sales by 150% within 3 months.</li>
@@ -45,7 +45,7 @@ export const portfolioItems: PortfolioItem[] = [
           <li>Enhanced user engagement metrics (e.g., time on page, lower bounce rate).</li>
           <li>Significant uplift in conversions from organic channels.</li>
         </ul>
-        <p>We utilized Tokopedia's native tools and SEO best practices to ensure maximum visibility and relevance for the client's products within the platform.</p>
+        <p>We utilized Tokopedia&apos;s native tools and SEO best practices to ensure maximum visibility and relevance for the client&apos;s products within the platform.</p>
       </>
     ),
     imageUrl: 'https://picsum.photos/seed/tokopedia-seo/600/400',
@@ -69,7 +69,7 @@ export const portfolioItems: PortfolioItem[] = [
           <li>Increased social media engagement by 300%.</li>
           <li>Contributed to a 40% sales uplift during the campaign period.</li>
         </ul>
-        <p>The strategy focused on creating platform-specific content that resonated with target audiences, seamlessly guiding them to the client's Lazada store for purchases.</p>
+        <p>The strategy focused on creating platform-specific content that resonated with target audiences, seamlessly guiding them to the client&apos;s Lazada store for purchases.</p>
       </>
     ),
     imageUrl: 'https://picsum.photos/seed/lazada-social/600/400',
@@ -145,16 +145,16 @@ export const experiences: Experience[] = [
 
 export const educations: Education[] = [
   {
-    degree: 'Certified Digital Marketing Professional (CDMP)',
-    institution: 'Digital Marketing Institute',
-    period: '2019',
-    description: 'Completed comprehensive certification covering SEO, SEM, Social Media Marketing, Email Marketing, and Digital Strategy.',
+    degree: 'Sarjana Komputer (S.Kom.) - Teknik Informatika',
+    institution: 'Universitas Muhammadiyah Purwokerto',
+    period: '2019 - 2023',
+    description: 'Graduated with a focus on software development, data structures, algorithms, and information systems. Developed a strong foundation in technology which complements my digital marketing expertise.',
   },
   {
-    degree: 'B.A. in Marketing Communications',
-    institution: 'University of Communications',
-    period: '2014 - 2018',
-    description: 'Specialized in advertising, public relations, and market research. Graduated with honors.',
+    degree: 'Certified Digital Marketing Professional (CDMP)',
+    institution: 'Digital Marketing Institute',
+    period: '2019', // Assuming this is still relevant or was obtained earlier/concurrently
+    description: 'Completed comprehensive certification covering SEO, SEM, Social Media Marketing, Email Marketing, and Digital Strategy.',
   },
 ];
 
@@ -170,3 +170,4 @@ Beyond marketplaces, I'm skilled in broader digital marketing disciplines includ
 When I'm not immersed in campaign analytics or exploring new platform features, I enjoy staying updated with industry blogs, attending webinars, and sharing insights with fellow marketing professionals. I'm committed to continuous learning and empowering businesses to succeed in the competitive online arena.`,
   profileImageUrl: "https://picsum.photos/seed/samsul-profile/300/300",
 };
+
