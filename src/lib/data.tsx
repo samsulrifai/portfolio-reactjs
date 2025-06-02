@@ -164,4 +164,3 @@ Beyond marketplaces, I'm skilled in broader digital marketing disciplines includ
 When I'm not immersed in campaign analytics or exploring new platform features, I enjoy staying updated with industry blogs, attending webinars, and sharing insights with fellow marketing professionals. I'm committed to continuous learning and empowering businesses to succeed in the competitive online arena.`,
   profileImageUrl: "https://picsum.photos/seed/samsul-profile/300/300",
 };
-
