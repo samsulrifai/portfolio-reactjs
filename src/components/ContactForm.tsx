@@ -1,10 +1,11 @@
+
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useEffect } from "react";
+import { useEffect, useActionState } from "react";
 
 import { submitContactForm, type ContactFormState } from "@/app/contact/actions";
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,7 @@ export function ContactForm() {
     message: "",
     status: "idle",
   };
-  const [formState, formAction] = useFormState(submitContactForm, initialFormState);
+  const [formState, formAction] = useActionState(submitContactForm, initialFormState);
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
